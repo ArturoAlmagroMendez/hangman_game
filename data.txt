@@ -1,0 +1,16 @@
+Html
+Css
+Javascript
+Rust
+Python
+C
+Java
+Cobolt
+Typescript
+Sql
+Ruby
+Pascal
+Kotlin
+Native
+Electron
+Basic
