@@ -1,7 +1,7 @@
 import random
 import os
-from images import images_hangman
-from images import game_over
+from images import *
+
 foopath = "Files/data.txt"
 foopath2 = "C:/Users/Arturo/Desktop/Workspace/hangman_game/Files/data.txt"
 fails = 0
@@ -43,8 +43,9 @@ def is_contained(random_word,user_input,secret_list):
             if user_input in list(random_word):
                 secret_list[i] = user_input
     
+    
         #os.system("clear")      
-        #print_menu(images_hangman,random_word,fails)
+        
 
     else:
         fails += 1
@@ -63,6 +64,9 @@ def run():
     #random_word_list = list(random_word)
     while fails < 6:
         print_menu(images_hangman,random_word,fails,secret_list)
+        if secret_list == list(random_word):
+            print(f"{game_win[0]}")
+            exit()
         user_input = input("\n \n Choose a character :")
         is_contained(random_word,user_input,secret_list)
 
