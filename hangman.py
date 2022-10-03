@@ -42,12 +42,12 @@ def is_contained(random_word,user_input,secret_list): #Check if user_input is co
             if user_input in list(random_word):#Replace "_" in secret_list for each character that match
                 secret_list[i] = user_input
     
-        os.system("clear")       #Clean the screen after each replace/fail
+        os.system("clear")       #Clean the screen after each replace
         
 
     else:
         fails += 1
-        os.system("clear")  
+        os.system("clear")  #Clean the screen after each fail
 
     return fails
         
