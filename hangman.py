@@ -19,7 +19,7 @@ def obtain_random_word():
 
 
 def print_menu(images_hangman, random_word, fails, secret_list):
-    print(random_word)
+    print("\n Welcome to the developer Hangman Game,all the words are programming languages =)")
     print(f"{images_hangman[fails]}")
     print_secret_word(secret_list)
 
@@ -70,7 +70,7 @@ def is_contained(random_word, user_input, secret_list):
 
 def run():
 
-    print("Welcome to the developer Hangman Game,all the words are programming languages =)")
+    
     random_word = obtain_random_word()
     secret_list = obtain_secret_word_and_list(random_word)
     while fails < 6:
@@ -81,6 +81,7 @@ def run():
         is_contained(random_word, user_input, secret_list)
 
     print(f"{images_hangman[fails]}{game_over[0]}")
+    print(f"The word was {random_word} 😭 😭 😭 😭 ")
 
 
 if __name__ == '__main__':
